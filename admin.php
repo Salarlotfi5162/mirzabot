@@ -1,7 +1,7 @@
 <?php
 #----------------[  admin section  ]------------------#
 $textadmin = ["panel", "/panel", $textbotlang['Admin']['textpaneladmin']];
-$text_panel_admin_login_template = "💎 | Version Bot: 5.10.77  
+$text_panel_admin_login_template = "💎 | Version Bot: $version
 📌 | Version Mini App: 0.1.1
 
 <blockquote>🔹 | این ربات کاملاً رایگان است و توسط تیم میرزا توسعه داده شده است</blockquote>
