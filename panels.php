@@ -1332,18 +1332,18 @@ class ManagePanel
             }
             $clients = $clients['obj'];
             $configs = array(
-                'id' => intval($clients['inboundId']),
+                'id' => isset($clients['inbound_ids'][0]) ? intval($clients['inbound_ids'][0]) : intval($clients['inboundId']),
                 'settings' => json_encode(
                     array(
                         'clients' => array(
                             array(
-                                "id" => $clients['uuid'],
-                                "flow" => "",
+                                "id" => isset($clients['id']) ? $clients['id'] : $clients['uuid'],
+                                "flow" => isset($clients['flow']) ? $clients['flow'] : "",
                                 "email" => $clients['email'],
-                                "totalGB" => $clients['total'],
+                                "totalGB" => isset($clients['totalGB']) ? $clients['totalGB'] : $clients['total'],
                                 "expiryTime" => $clients['expiryTime'],
                                 "enable" => true,
-                                "subId" => $clients['subId'],
+                                "subId" => isset($clients['subId']) ? $clients['subId'] : "",
                             )
                         ),
                         'decryption' => 'none',
